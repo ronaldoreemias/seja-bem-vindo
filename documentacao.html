@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação do Sistema 1.0.5</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .navbar-dark {
+            background-color: #2d2d2d;
+        }
+        .welcome {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            margin-top: 30px;
+        }
+        .img-gallery img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        .terms {
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .btn-primary, .btn-success, .btn-secondary {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        .btn-primary:hover, .btn-success:hover, .btn-secondary:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+        }
+        footer {
+            background-color: #2d2d2d;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 1em 0;
+            border-top: 1px solid #444;
+        }
+        .container {
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+    <script>
+        function toggleButtons() {
+            var checkBox = document.getElementById("termsCheckbox");
+            var sendButton = document.getElementById("sendButton");
+            var linkButtons = document.getElementById("linkButtons");
+
+            if (checkBox.checked) {
+                sendButton.disabled = false;
+            } else {
+                sendButton.disabled = true;
+                linkButtons.classList.add("hidden");
+            }
+        }
+
+        function showButtons() {
+            var linkButtons = document.getElementById("linkButtons");
+            linkButtons.classList.remove("hidden");
+        }
+    </script>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <p style="margin: 10px; color: white;">|</p>
+        <a class="navbar-brand" href="#">Documentação</a>
+        <p style="margin: 10px; color: white;">|</p>
+        <a class="navbar-brand" href="detalhes.html">Detalhes sobre o Sistema</a>
+        <p style="margin: 10px; color: white;">|</p>
+        <a class="navbar-brand" href="versao.html">Versões</a>
+    </header>
+    <main class="container">
+        <div class="welcome">
+            <h1>Documentação do Sistema 1.0.5</h1>
+            <h2>Introdução</h2>
+            <p>O <strong>Sistema 1.0.5</strong> é uma interface web criada para oferecer navegação e interação para os usuários através de diferentes seções, incluindo vagas de emprego, bootcamp, cursos, e um editor de código. Este documento descreve a estrutura e o funcionamento do arquivo HTML principal do sistema.</p>
+            <h2>Estrutura do HTML</h2>
+            <h3>Cabeçalho (Header)</h3>
+            <p>O elemento <code>&lt;header&gt;</code> contém a barra de navegação principal do site.</p>
+            <pre><code>&lt;header&gt;
+    &lt;div style="width: 80%; display: flex; justify-content: space-between;"&gt;
+        &lt;a href="#"&gt;&lt;button&gt;Home&lt;/button&gt;&lt;/a&gt;
+        &lt;a href="index(1).html"&gt;&lt;button&gt;Vagas de Emprego&lt;/button&gt;&lt;/a&gt;
+        &lt;a href="bootcamp.html"&gt;&lt;button&gt;Boot-Camp&lt;/button&gt;&lt;/a&gt;
+        &lt;a href="teste.html"&gt;&lt;button&gt;Cursos&lt;/button&gt;&lt;/a&gt;
+        &lt;a href="editor.html"&gt;&lt;button&gt;Editor de código&lt;/button&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+            </code></pre>
+            <h3>Corpo Principal (Main)</h3>
+            <p>O elemento <code>&lt;main&gt;</code> é dividido em duas principais seções: <strong>navegação</strong> e <strong>tela_conteudo</strong>.</p>
+            <pre><code>&lt;main&gt;
+    &lt;div class="navegação"&gt;
+        &lt;div class="opcoes"&gt;
+            &lt;a href="#"&gt;&lt;button&gt;Home&lt;/button&gt;&lt;/a&gt;
+            &lt;a href="index(1).html"&gt;&lt;button&gt;Vagas de Emprego&lt;/button&gt;&lt;/a&gt;
+            &lt;a href="#"&gt;&lt;button&gt;Boot-Camp&lt;/button&gt;&lt;/a&gt;
+            &lt;a href="teste.html"&gt;&lt;button&gt;Cursos&lt;/button&gt;&lt;/a&gt;
+            &lt;a href="editor.html"&gt;&lt;button&gt;escreva seus códigos&lt;/button&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;div style="text-align: center; width: 100%;"&gt;
+                &lt;p&gt;Histórico de Conversa&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="historico" id="historico-conversas"&gt;
+                &lt;!-- Aqui será adicionado o histórico de conversa --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tela_conteudo"&gt;
+        &lt;div style="height: 40px; background-color: #0c0b0b; color: white; width: 90%; text-align: center; border-radius: 7px;"&gt;
+            &lt;p&gt;pergunte duvidas sobre informática&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="caixa" id="chat-container"&gt;
+            &lt;div class="pombo"&gt;
+                &lt;p&gt;ATENÇÃO! Caso queira que a I.A pesquise na internete&lt;/p&gt;
+                &lt;p&gt;Escreva "pesquise sobre" antes de digitar o quer pesquisar.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div style="display: flex; justify-content: center; align-items: center; background-color: #333; width: 100%; height: 60px; padding: 10px; border-radius: 5px;"&gt;
+            &lt;input type="text" id="user-input" placeholder="Pergunte alguma coisa..." style="flex: 1; padding: 10px; border: none; border-radius: 5px; margin-right: 10px; background-color: #f0ecec; color: #0f0f0f;"&gt;
+            &lt;button onclick="processInput()" style="padding: 10px 20px; border: none; border-radius: 5px; background-color: #0078d4; color: #fff; cursor: pointer;"&gt;Enviar&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+            </code></pre>
+            <h2>Estilos (CSS)</h2>
+            <p>O arquivo inclui várias regras de estilo CSS para definir a aparência e a disposição dos elementos da página.</p>
+            <pre><code>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d8d7dd;
+}
+.loader span {
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+    background: #333;
+    border-radius: 50%;
+    display: inline-block;
+    animation: loading 0.6s infinite alternate;
+}
+            </code></pre>
+            <h2>Funcionamento</h2>
+            <h3>Funcionamento (Continuação)</h3>
+
+<p>O Sistema 1.0.5 tem como objetivo oferecer uma interface amigável e intuitiva para os usuários interagirem com diferentes funcionalidades, incluindo a consulta de vagas de emprego, cursos, bootcamps e um editor de código. A estrutura divide claramente as áreas de navegação e de conteúdo, permitindo fácil acesso a informações e funcionalidades específicas.</p>
+
+<ul> <li><strong>Navegação Intuitiva</strong>: Links e botões bem definidos para facilitar o acesso a diferentes seções.</li> <li><strong>Área de Conteúdo Dinâmica</strong>: Espaço para exibição de informações e interação com o usuário.</li> <li><strong>Responsividade</strong>: Uso de CSS para garantir que a página se ajuste bem em diferentes tamanhos de tela.</li> </ul>
+
+<h3>Código CSS (Continuação)</h3>
+
+<p>Além das regras gerais de estilo, o sistema inclui estilos específicos para as mensagens do usuário e da AI, além de um indicador de carregamento:</p>
+
+<pre><code>.user-message { background-color: #dcf8c6; padding: 10px; border-radius: 10px; margin-bottom: 10px; margin-left: auto; max-width: 30%; display: block; word-wrap: break-word; white-space: pre-wrap; }
+
+.ai-message { background-color: #ffffff; padding: 10px; border-radius: 10px; margin-bottom: 10px; margin-right: auto; max-width: 30%; display: block; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); word-wrap: break-word; white-space: pre-wrap; }
+
+.loader { display: flex; justify-content: center; align-items: center; }
+
+.loader span { width: 10px; height: 10px; margin: 3px; background: #333; border-radius: 50%; display: inline-block; animation: loading 0.6s infinite alternate; } </code></pre>
+
+<h2>Conclusão</h2>
+
+<p>Esta documentação fornece uma visão geral do funcionamento e da estrutura do arquivo HTML do Sistema 1.0.5. Para qualquer dúvida adicional ou sugestões de melhorias, sinta-se à vontade para entrar em contato.</p>
+
+<p>Espero que esta documentação ajude a entender melhor o seu sistema. Se precisar de mais alguma coisa ou de mais detalhes, estou aqui para ajudar! 🚀📘</p>
+
+</main> <footer> <p>&copy; 2024 Stitema criado por Ronaldo Reemias Araújo. Todos os direitos reservados.</p> </footer> <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> </body> </html>

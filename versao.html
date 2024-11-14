@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vindo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .navbar-dark {
+            background-color: #2d2d2d;
+        }
+        .welcome {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            margin-top: 30px;
+        }
+        .img-gallery img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        .terms {
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .btn-primary, .btn-success, .btn-secondary {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        .btn-primary:hover, .btn-success:hover, .btn-secondary:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+        }
+        footer {
+            background-color: #2d2d2d;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 1em 0;
+            border-top: 1px solid #444;
+        }
+        .container {
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        main div button {
+            background: none;
+           margin: 20px;
+            color: black;
+        }
+    </style>
+    <script>
+        function toggleButtons() {
+            var checkBox = document.getElementById("termsCheckbox");
+            var sendButton = document.getElementById("sendButton");
+            var linkButtons = document.getElementById("linkButtons");
+
+            if (checkBox.checked) {
+                sendButton.disabled = false;
+            } else {
+                sendButton.disabled = true;
+                linkButtons.classList.add("hidden");
+            }
+        }
+
+        function showButtons() {
+            var linkButtons = document.getElementById("linkButtons");
+            linkButtons.classList.remove("hidden");
+        }
+    </script>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <p style="margin: 10px; color: white;">|</p>
+        <a class="navbar-brand" href="documentacao.html">Documentação</a>
+        <p style="margin: 10px; color: white;">|</p>
+        <a class="navbar-brand" href="detalhes.html">Detalhes sobre o Sistema</a>
+        <p style="margin: 10px; color: white;">|</p>
+        <a class="navbar-brand" href="versao.html">Versões</a>
+    </header>
+    <main class="container">
+        <div>
+            <h3> modelo de 14/11/2024</h3>
+            <p>modelo desenvolvido com interface mais aprimorada, a I.A já está com mais dados</p>
+            <a href="https://vagas-74cb2-c83b9.web.app/">
+                <button>versão: 1.0.5 </button>
+            </a>
+        </div>
+        <div>
+            <h3> modelo de 14/11/2024</h3>
+            <p>modelo desenvolvido com interface mais aprimorada e opções de navegação, a I.A já está com menos dados, mas ela responde</p>
+            <a href="https://vagasss.web.app/">
+                <button>versão: 1.0.4 </button>
+            </a>
+        </div>
+        <div>
+            <h3> modelo de 14/11/2024</h3>
+            <p>versão mobile do sistema</p>
+            <p>modelo desenvolvido sem interface  aprimorada, a I.A já está poucos dados. util para aprender a lógica</p>
+            <a href="https://vagasdev.web.app/">
+                <button>versão: 1.0.3 </button>
+            </a>
+        </div>
+        <div>
+            <h3> modelo de 14/11/2024</h3>
+            <p>modelo desenvolvido sem interface  aprimorada, a I.A já está com quase nenhum dados. util para aprender a lógica de APIs</p>
+            <p>nele se tem API da :</p>
+            <p>wikipedia</p>
+            <p>DuckDuckGo</p>
+            <a href="https://vagas-74cb2-c83b9.web.app/">
+                <button>versão: 1.0.2 </button>
+            </a>
+        </div>
+        <div>
+            <h3> modelo de 14/11/2024</h3>
+            <p>versão mobile do sistema</p>
+            <a href="https://vagasdev.web.app/">
+                <button>versão: 1.0.1 </button>
+            </a>
+        </div>
+
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>&copy; 2024 Site Similar. Todos os direitos reservados.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
